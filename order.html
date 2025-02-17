@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OO4U - Place Your Order</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles - Similar al anterior */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .contact-btn {
+            background: #0040FF;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            border: none;
+        }
+
+        /* Order Form Styles */
+        .order-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .order-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-group select,
+        .form-group input {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: white;
+            appearance: none;
+            position: relative;
+        }
+
+        .dropdown-arrow {
+            position: relative;
+        }
+
+        .dropdown-arrow::after {
+            content: '▼';
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        /* Resume Styles */
+        .order-resume {
+            background: #f8f8f8;
+            padding: 2rem;
+            border-radius: 10px;
+            height: fit-content;
+        }
+
+        .resume-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .resume-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .total-to-pay {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 2px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .order-button {
+            background: #0040FF;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .total-amount {
+            color: #0040FF;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="OO4U Logo">
+            OO4U
+        </div>
+        <nav class="nav-menu">
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">Services</a>
+            <a href="#">Offers</a>
+            <button class="contact-btn">Contact</button>
+        </nav>
+    </header>
+
+    <main class="order-container">
+        <div class="order-form">
+            <h1 class="form-title">Place your order</h1>
+            
+            <div class="form-group">
+                <label>Delivery Address</label>
+                <div class="dropdown-arrow">
+                    <input type="text" value="carrera 44 # 42 - 29" readonly>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Products</label>
+                <div class="dropdown-arrow">
+                    <select>
+                        <option>Spicy noodles ...</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Type of Delivery</label>
+                <div class="dropdown-arrow">
+                    <select>
+                        <option>Prioritay 25 - 50 min</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Payment Method</label>
+                <div class="dropdown-arrow">
+                    <select>
+                        <option>cash</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-resume">
+            <h2 class="resume-title">Resume</h2>
+            
+            <div class="resume-item">
+                <span>Product cost:</span>
+                <span>$52.00</span>
+            </div>
+
+            <div class="resume-item">
+                <span>Discount:</span>
+                <span>$0.00</span>
+            </div>
+
+            <div class="resume-item">
+                <span>Shipping cost:</span>
+                <span>$3.00</span>
+            </div>
+
+            <div class="resume-item">
+                <span>Tax services:</span>
+                <span>$1.56</span>
+            </div>
+
+            <div class="total-to-pay">
+                <span class="total-amount">Total To Pay: $56.56</span>
+                <button class="order-button">Order</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
