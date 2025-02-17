@@ -1,138 +1,31 @@
-<!-- Página 1: Carrito de Compras -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OO4U - Cart</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Header Styles */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        .contact-btn {
-            background: #0040FF;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            border: none;
-        }
-
-        /* Cart Items */
-        .cart-container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .cart-item {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            padding: 1rem;
-            border-radius: 10px;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .item-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-
-        .item-details {
-            flex: 1;
-        }
-
-        .quantity-controls {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .quantity-btn {
-            background: #eee;
-            border: none;
-            padding: 0.5rem;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .total-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 2rem;
-        }
-
-        .go-to-pay {
-            background: #0040FF;
-            color: white;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .trash-icon {
-            color: #666;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body>
     <header class="header">
         <div class="logo">
-            <img src="logo.png" alt="OO4U Logo">
-            OO4U
+            <div class="logo-box">
+                <span class="logo-text">f</span>
+            </div>
+            <h1>004U</h1>
         </div>
         <nav class="nav-menu">
             <a href="#">Home</a>
             <a href="#">Menu</a>
             <a href="#">Services</a>
             <a href="#">Offers</a>
+            <a href ="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
             <button class="contact-btn">Contact</button>
         </nav>
     </header>
 
+
     <main class="cart-container">
         <div class="cart-item">
-            <img src="spicy-noodles.jpg" alt="Spicy noodles" class="item-image">
+            <img src="img/spicy-noodles.png" alt="Spicy noodles" class="item-image">
             <div class="item-details">
                 <h3>Spicy noodles</h3>
                 <p>$18.00</p>
@@ -145,7 +38,7 @@
         </div>
 
         <div class="cart-item">
-            <img src="vegetable-salad.jpg" alt="Vegetable salad" class="item-image">
+            <img src="img/vegetable-salad.png" alt="Vegetable salad" class="item-image">
             <div class="item-details">
                 <h3>Vegetable salad</h3>
                 <p>$52.00</p>
