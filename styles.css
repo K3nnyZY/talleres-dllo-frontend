@@ -10,6 +10,34 @@ body {
     overflow-x: hidden;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Logo Box */
+.logo-box {
+    width: 40px;
+    height: 40px;
+    background-color: #0040FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+}
+
 /* Header */
 .header {
     display: flex;
@@ -21,15 +49,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: bold;
-    color: #0040FF;
-    font-size: 1.5rem;
 }
 
 .nav-menu {
@@ -336,7 +355,7 @@ body {
 .social-icon {
     width: 40px;
     height: 40px;
-    background: #0040FF;
+    background: #a5bcff;
     border-radius: 50%;
     display: flex;
     align-items: center;
